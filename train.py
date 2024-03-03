@@ -174,9 +174,7 @@ epochs = 100
 for epoch in range(epochs):
     print(f"Epoch {epoch+1}\n-----------------------------------")
     train_loss, train_acc = train(train_dataloader, model, loss_fn, optimizer)
-    # learning rate scheduler
-    #if scheduler is not None:
-    #    scheduler.step()
+    
     test_loss, test_acc = test(test_dataloader, model, loss_fn)
     with open(logname, 'a') as logfile:
         logwriter = csv.writer(logfile, delimiter=',')
