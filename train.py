@@ -162,7 +162,7 @@ def test(dataloader, model, loss_fn):
 
 # apply train and test
 
-logname = "/home/abdullah/Desktop/Proposals_experiments/Averageformer/Experiments_cifar10/logs_averageformer/logs_cifar10.csv"
+logname = "/PATH/Averageformer/Experiments_cifar10/logs_averageformer/logs_cifar10.csv"
 if not os.path.exists(logname):
   with open(logname, 'w') as logfile:
     logwriter = csv.writer(logfile, delimiter=',')
@@ -186,7 +186,7 @@ print("Done!")
 
 # saving trained model
 
-path = "/home/abdullah/Desktop/Proposals_experiments/Averageformer/Experiments_cifar10/weights_averageformer"
+path = "/PATH/Averageformer/Experiments_cifar10/weights_averageformer"
 model_name = "AverageformerImageClassification_cifar10"
 torch.save(model.state_dict(), f"{path}/{model_name}.pth")
 print(f"Saved Model State to {path}/{model_name}.pth ")
